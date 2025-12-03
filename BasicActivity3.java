@@ -27,7 +27,7 @@ public class BasicActivity3 {
 	System.out.println("Sum: " + total);
 	System.out.println("Difference: " + diff);
 	System.out.println("Product: " + product);
-	
+	scanner.close();
 	}
 	
 	public static int sum(int a,int b) {
@@ -39,4 +39,5 @@ public class BasicActivity3 {
 	public static int multiply(int a,int b) {
 		return a * b;
 	}
+	
 }

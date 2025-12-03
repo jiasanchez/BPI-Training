@@ -26,7 +26,7 @@ public class BasicActivity4 {
 	else {
 		System.out.println("Senior");
 	}
-		
+		scanner.close();
 	}
-
+	
 }

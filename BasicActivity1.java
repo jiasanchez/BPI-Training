@@ -19,6 +19,7 @@ public class BasicActivity1 {
 		String input = scanner.next();
 		
 		System.out.println("Hello, " + input + "!");
+		scanner.close();
 	}
 
 }
