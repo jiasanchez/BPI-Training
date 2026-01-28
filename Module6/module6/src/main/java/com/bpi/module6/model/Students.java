@@ -1,10 +1,13 @@
 package com.bpi.module6.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,12 +19,26 @@ public class Students {
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
+	@Column(name = "name", nullable = false, length = 50, columnDefinition = "VARCHAR(50)")
 	private String name;
+
+	@Column(name = "age", columnDefinition = "INT")
 	private int age;
+
+	@Column(name = "email", unique = true, length = 100, columnDefinition = "VARCHAR(100)")
 	private String email;
 	
+	@OneToMany(mappedBy = "student")
+	private List<Courses> courses;
+
 	
+	public List<Courses> getCourses() {
+		return courses;
+	}
+	public void setCourses(List<Courses> courses) {
+		this.courses = courses;
+	}
 	public Long getId() {
 		return id;
 	}

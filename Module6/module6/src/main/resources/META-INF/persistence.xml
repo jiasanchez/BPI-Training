@@ -10,6 +10,7 @@
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>com.bpi.module6.model.Students</class>
+		<class>com.bpi.module6.model.Courses</class>
 		<properties>
 			<!-- JDBC connection -->
 			<property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
