@@ -20,7 +20,9 @@ public class App
     	EntityManager em = EntityManagerUtil.getInstance().createEntityManager();
 
     	try {
-    				runM6Activity4(em);
+			M6Activity5.selectAllStudents(em);
+			M6Activity5.countCoursesByStudentId(em);
+			M6Activity5.findStudentsByAgeGreaterThan(em);
 
     			} finally {
     				EntityManagerUtil.getInstance().closeEntityManager(em);
