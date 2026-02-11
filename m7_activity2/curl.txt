@@ -15,3 +15,32 @@
 }'
 
 4. curl --location --request DELETE 'localhost:4568/profiles/2'
+
+5. Response
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Jose Rizal",
+            "group": "Illustrados",
+            "apiCallsMade": null
+        },
+        {
+            "id": 3,
+            "name": "Antonio Luna",
+            "group": "Illustrados",
+            "apiCallsMade": null
+        },
+        {
+            "id": null,
+            "name": "John Isiah Sanchez",
+            "group": "Group 6",
+            "apiCallsMade": [
+                "GET: /profiles",
+                "POST: /profiles",
+                "PUT: /profiles",
+                "DELETE: /profiles"
+            ]
+        }
+    ],
+    "status": "Success"
