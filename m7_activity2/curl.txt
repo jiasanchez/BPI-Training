@@ -1,0 +1,17 @@
+1. curl --location 'localhost:4568/profiles'
+
+2. curl --location 'localhost:4568/profiles' \
+--header 'Content-Type: text/plain' \
+--data '{
+"name": "John Isiah Sanchez",
+"group": "Group 6"
+}'
+
+3. curl --location --request PUT 'localhost:4568/profiles?name=Emilio%20Aguinaldo' \
+--header 'Content-Type: text/plain' \
+--data '{
+"name": "John Isiah Sanchez",
+"group": "Group 6"
+}'
+
+4. curl --location --request DELETE 'localhost:4568/profiles/2'
