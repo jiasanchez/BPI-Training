@@ -11,7 +11,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <!-- Entity classes (optional, can be auto-scanned) -->
-        <class>ph.com.bpi.training.Movie</class>
+        <class>ph.com.bpi.training.model.Movie</class>
        
 
         <properties>
