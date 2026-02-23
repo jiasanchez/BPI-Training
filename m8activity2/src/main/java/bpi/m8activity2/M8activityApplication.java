@@ -1,4 +1,4 @@
-package bpi.m8activity1;
+package bpi.m8activity2;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -7,12 +7,12 @@ import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
-public class M8activity1Application {
+public class M8activityApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(M8activity1Application.class, args);
+		SpringApplication.run(M8activityApplication.class, args);
 	}
-		//Activity 1
+		//Activity 2
 		@Bean
 		CommandLineRunner run(BookService bookService) {
 			return args -> {
