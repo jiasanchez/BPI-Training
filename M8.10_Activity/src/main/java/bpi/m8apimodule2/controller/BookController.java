@@ -16,17 +16,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import bpi.m8apimodule2.dto.BookDTO;
 import bpi.m8apimodule2.model.Book;
+import bpi.m8apimodule2.service.BookService;
 
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
 	
 	private List<Book> books = new ArrayList<>();
+	private final BookService bookService;
 	
-	public BookController() {
-			books.add(new Book(1L,"Milele", "James Caraan"));
-			books.add(new Book(2L, "Avatar","James Cameron"));
-			books.add(new Book(3L, "Interstellar", "Christopher Nolan"));
+	
+	public BookController(BookService bookService) {
+		this.bookService = bookService;
 			
 	}
 	
@@ -49,11 +50,7 @@ public class BookController {
 
 	@PostMapping
 	public BookDTO addBook(@RequestBody BookDTO bookDTO) {
-		Long newId = (long) (books.size() + 1);
-		Book book = fromDTO(bookDTO);
-		book.setId(newId);
-		books.add(book);
-		return toDTO(book);
+		return bookService.addBook(bookDTO);
 	}
 	
 	//M8.3 ACTIVITY

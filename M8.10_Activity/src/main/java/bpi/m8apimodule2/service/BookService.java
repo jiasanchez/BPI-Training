@@ -19,14 +19,35 @@ public class BookService {
 		this.bookRepo = bookRepo;
 	}
 	
-	public List<BookDTO> findAllBooks(){
-			return books.stream()
-					.map(book -> {
-						BookDTO dto = new BookDTO();
-						dto.setTitle(book.getTitle());
-						dto.setAuthor(book.getAuthor());
-						return dto;
-					})
-					.collect(Collectors.toList());
+	public List<Book> findAllBooks(){
+			return bookRepo.findAll();
+	}
+	public BookDTO addBook(BookDTO bookDTO) {
+		Book book = new Book();
+		book.setTitle(bookDTO.getTitle());
+		book.setAuthor(bookDTO.getAuthor());
+		Book save = bookRepo.save(book);
+		
+		BookDTO response = new BookDTO();
+		response.setTitle(save.getTitle());
+		response.setAuthor(save.getAuthor());
+		return response;
+	}
+	public Book updateMovie(Long id, Book update) {
+		Book uBook = bookRepo.findById(id)
+				.orElseThrow(() -> new RuntimeException("Movie not found."));
+		if(update.getTitle() != null) {
+			uBook.setTitle(update.getTitle());
+		}		
+		if(update.getAuthor() != null) {
+			uBook.setAuthor(update.getAuthor());
+		}
+		return bookRepo.save(uBook);
+	}
+	public void deleteBook(Long id) {
+		if (!bookRepo.existsById(id)) {
+			throw new RuntimeException("Book is not existing with " + id);
+		}
+		bookRepo.deleteById(id);
 	}
 }
