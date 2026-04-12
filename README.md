@@ -14,8 +14,8 @@
    o Role Required: Admin
    o All API Endpoints need login
 ## API Endpoints / Sample API Requests
-   o GET http://localhost:8080/api/bookshop
-   o POST http://localhost:8080/api/bookshop
+   1. GET http://localhost:8080/api/bookshop
+   2. POST http://localhost:8080/api/bookshop
      JSON BODY:
          {
             "title": "The Hobbit",
@@ -23,7 +23,7 @@
             "price": 499.99,
             "createdAt": "2025-06-10"
         }
-   o PUT http://localhost:8080/api/bookshop/{id}
+   3. PUT http://localhost:8080/api/bookshop/{id}
         JSON BODY:
          {
             "title": "Update Title",
@@ -31,7 +31,7 @@
             "price": 20.00,
             "createdAt": "2026-01-10"
         }
-   o DEL http://localhost:8080/api/bookshop/{id}
+   4. DEL http://localhost:8080/api/bookshop/{id}
 ## Project Setup
   1. Update application.properties
        spring.datasource.url=jdbc:mysql://localhost:3306/yourdb
