@@ -23,7 +23,7 @@
             "price": 499.99,
             "createdAt": "2025-06-10"
         }
-   3. PUT http://localhost:8080/api/bookshop/{id}
+   4. PUT http://localhost:8080/api/bookshop/{id}
       -  JSON BODY:
          {
             "title": "Update Title",
@@ -31,7 +31,7 @@
             "price": 20.00,
             "createdAt": "2026-01-10"
         }
-   4. DEL http://localhost:8080/api/bookshop/{id}
+   5. DEL http://localhost:8080/api/bookshop/{id}
 ## Project Setup
   1. Update application.properties
        spring.datasource.url=jdbc:mysql://localhost:3306/yourdb
