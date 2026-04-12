@@ -1,0 +1,27 @@
+info:
+  name: UPDATE BOOK
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://localhost:8080/api/bookshop/1
+  body:
+    type: json
+    data: |-
+      {
+      "title": "Update Title",
+      "author": "Update Author",
+      "price": 100.0,
+      "createdAt": "2025-05-10" 
+      }
+  auth:
+    type: basic
+    username: admin
+    password: adminpw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

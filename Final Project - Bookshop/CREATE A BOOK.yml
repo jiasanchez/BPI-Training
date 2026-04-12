@@ -1,0 +1,27 @@
+info:
+  name: CREATE A BOOK
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8080/api/bookshop
+  body:
+    type: json
+    data: |-
+      {
+      "title": "Test Title",
+      "author": "Test Author",
+      "price": 100,
+      "createdAt": "2025-05-10" 
+      }
+  auth:
+    type: basic
+    username: admin
+    password: adminpw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

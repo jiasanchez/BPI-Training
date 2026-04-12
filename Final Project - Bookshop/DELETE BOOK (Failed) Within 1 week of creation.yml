@@ -1,0 +1,18 @@
+info:
+  name: DELETE BOOK (Failed) Within 1 week of creation
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: http://localhost:8080/api/bookshop/1
+  auth:
+    type: basic
+    username: admin
+    password: adminpw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,18 @@
+info:
+  name: DELETE BOOK (Sucessful)
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://localhost:8080/api/bookshop/3
+  auth:
+    type: basic
+    username: admin
+    password: adminpw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
