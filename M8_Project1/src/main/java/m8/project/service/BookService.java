@@ -68,10 +68,10 @@ public class BookService {
 			Book existingBook = bookRepo.findById(id)
 							.orElseThrow(() -> new EntityNotFoundException("Book ID not found."));
 			
-			if (existingBook.getTitle() != null) {
+			if (bookDTO.getTitle() != null && !bookDTO.getTitle().isBlank()) {
 				existingBook.setTitle(bookDTO.getTitle());
 			}
-			if (existingBook.getAuthor() != null) {
+			if (bookDTO.getAuthor() != null && !bookDTO.getAuthor().isBlank()) {
 				existingBook.setAuthor(bookDTO.getAuthor());
 			}
 			Book updatedBook = bookRepo.save(existingBook);
