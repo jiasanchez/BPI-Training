@@ -16,14 +16,14 @@
 ## API Endpoints / Sample API Requests
    1. GET http://localhost:8080/api/bookshop
    2. POST http://localhost:8080/api/bookshop
-    - JSON BODY:
+       - JSON BODY:
          {
             "title": "The Hobbit",
             "author": "J.R.R. Tolkien",
             "price": 499.99,
             "createdAt": "2025-06-10"
         }
-   4. PUT http://localhost:8080/api/bookshop/{id}
+   3.  PUT http://localhost:8080/api/bookshop/{id}
       -  JSON BODY:
          {
             "title": "Update Title",
