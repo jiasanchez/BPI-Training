@@ -34,6 +34,7 @@
    5. DEL http://localhost:8080/api/bookshop/{id}
 ## Project Setup
   1. Update application.properties
+     ```yaml
        spring.datasource.url=jdbc:mysql://localhost:3306/yourdb
        spring.datasource.username=youruser
        spring.datasource.password=yourpassword
