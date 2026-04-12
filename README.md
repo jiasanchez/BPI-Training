@@ -7,12 +7,12 @@
    o Partial Update (Author,Title,Price,Created Date)
    o Full Update
 5.	Delete a Book 
-   o	A book can be deleted only if it was created at least one (1) week ago
-   o	A book cannot be deleted if it is older than one (1) year
+   -	A book can be deleted only if it was created at least one (1) week ago
+   -	A book cannot be deleted if it is older than one (1) year
 ## Security
-   o Authentication: Basic Auth
-   o Role Required: Admin
-   o All API Endpoints need login
+   - Authentication: Basic Auth
+   - Role Required: Admin
+   - All API Endpoints need login
 ## API Endpoints / Sample API Requests
    1. GET http://localhost:8080/api/bookshop
    2. POST http://localhost:8080/api/bookshop
