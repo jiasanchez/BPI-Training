@@ -17,6 +17,7 @@
    1. GET http://localhost:8080/api/bookshop
    2. POST http://localhost:8080/api/bookshop
        - JSON BODY:
+         ```json
          {
             "title": "The Hobbit",
             "author": "J.R.R. Tolkien",
@@ -25,6 +26,7 @@
         }
    3.  PUT http://localhost:8080/api/bookshop/{id}
       -  JSON BODY:
+       ```json
          {
             "title": "Update Title",
             "author": "Update Author",
