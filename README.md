@@ -16,7 +16,6 @@
 ## API Endpoints / Sample API Requests
    1. GET http://localhost:8080/api/bookshop
    2. POST http://localhost:8080/api/bookshop
-       - JSON BODY:
          ```json
          {
             "title": "The Hobbit",
@@ -25,7 +24,6 @@
             "createdAt": "2025-06-10"
         }
    3.  PUT http://localhost:8080/api/bookshop/{id}
-      -  JSON BODY:
        ```json
          {
             "title": "Update Title",
